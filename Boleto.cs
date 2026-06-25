@@ -18,7 +18,7 @@ namespace PracticaTaquilla
 
         public Boleto()
         {
-            this.precioBase = 80.00;
+            this.PrecioBase = 80.00;
         }
 
         public abstract double CalcularPrecioFinal();

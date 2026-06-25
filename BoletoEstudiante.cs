@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticaTaquilla
 {
-    internal abstract class BoletoEstudiante : Boleto
+    public class BoletoEstudiante : Boleto
     {
         public string Matricula { get; set; }
 

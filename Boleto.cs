@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticaTaquilla
 {
-    internal abstract class Boleto
+    public abstract class Boleto
     {
         public double precioBase;
 

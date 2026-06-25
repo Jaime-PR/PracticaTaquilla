@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbTipoBoleto = new System.Windows.Forms.ComboBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.cmbTipoBoleto = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +48,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(601, 109);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(314, 54);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Taquilla de cine";
             // 
             // panel2
             // 
@@ -62,25 +72,36 @@
             this.panel2.Size = new System.Drawing.Size(601, 370);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // txtTotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(126, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Taquilla de cine";
+            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(291, 308);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(208, 38);
+            this.txtTotal.TabIndex = 4;
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(416, 38);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Seleccionar el boleto que desea:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(96, 304);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 38);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Total a pagar: ";
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(174)))), ((int)(((byte)(182)))));
+            this.btnCalcular.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.ForeColor = System.Drawing.Color.White;
+            this.btnCalcular.Location = new System.Drawing.Point(174, 174);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(240, 70);
+            this.btnCalcular.TabIndex = 2;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // cmbTipoBoleto
             // 
@@ -95,35 +116,15 @@
             this.cmbTipoBoleto.Size = new System.Drawing.Size(272, 45);
             this.cmbTipoBoleto.TabIndex = 1;
             // 
-            // btnCalcular
+            // label2
             // 
-            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(174)))), ((int)(((byte)(182)))));
-            this.btnCalcular.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.ForeColor = System.Drawing.Color.White;
-            this.btnCalcular.Location = new System.Drawing.Point(174, 174);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(240, 70);
-            this.btnCalcular.TabIndex = 2;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(96, 304);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 38);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Total a pagar: ";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(291, 308);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(208, 38);
-            this.txtTotal.TabIndex = 4;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(416, 38);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Seleccionar el boleto que desea:";
             // 
             // Form1
             // 

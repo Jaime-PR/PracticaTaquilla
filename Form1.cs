@@ -25,14 +25,14 @@ namespace PracticaTaquilla
             {
                boleto = new BoletoEstudiante("12345");
             }
-            else if (cmbTipoBoleto.Text == "Adulto")
+            else if (cmbTipoBoleto.Text == "Adulto mayor")
             {
                 boleto = new BoletoAdultoMayor("ABC123");
             }
-            /*else if (cmbTipoBoleto.Text == "General")
+            else if (cmbTipoBoleto.Text == "General")
             {
-                
-            }*/
+                boleto = new BoletoGeneral();
+            }
 
             double precioFinal = boleto.CalcularPrecioFinal();
             txtTotal.Text = precioFinal.ToString("C");
